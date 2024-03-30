@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="jquery-3.7.1.js"></script>
+    <script src="jquery-ui-1.13.2.custom/jquery-ui.js"></script>
+    <link rel="stylesheet" href="jquery-ui-1.13.2.custom/jquery-ui.css">
+    <script>
+        $(document).ready(function(){
+            $("button").click(function() {
+
+                $("#box").load("/dasarWeb/praktik_jquery/test-content.html");
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <div id="box">
+        <h2>Klik Tombol di bawah untuk menampilkan konten</h2>
+    </div>
+
+    <button type="button">Klik Saya</button>
+    
+</body>
+</html>
