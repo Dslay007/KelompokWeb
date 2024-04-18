@@ -13,9 +13,14 @@
         $query = "INSERT INTO anggota(nama, jenis_kelamin, alamat, no_telp) 
         VALUES ('$nama', '$jenis_kelamin', '$alamat', '$no_telp')";
 
-        if ($aksi ) {
-            # code...
+        if (mysqli_query($connect, $query) ) {
+            header("Location: index.php");
+            exit();
+        } else {
+            echo "Gagal menambahkan data: " . mysqli_error($connect);
         }
     }
+
+    mysqli_close($connect)
 
 ?>
