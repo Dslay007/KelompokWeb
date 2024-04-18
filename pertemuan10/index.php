@@ -38,7 +38,7 @@
                           <td>" .$row["no_telp"]  . "</td>
                           <td>
                           <a href = 'edit.php?id=".$row["id"]."'>Edit</a>
-                          <a href = '#' onclick = 'konfirmasiHapus(" .$row["id"]  . ", \"".$row["nama"] . "\")'>Hapus</a>
+                          <a href = '#' onclick = 'konfirmasiHapus(".$row["id"].",\"".$row["nama"] . "\")'>Hapus</a>
                           </td>
                           </tr>"; 
                 }
@@ -57,7 +57,7 @@
         function konfirmasiHapus(id, nama){
             var konfirmasi = confirm ("Apakah Anda yakin ingin menghapus data dengan nama : " + nama)
             if (konfirmasi) {
-                window.location.href = "proses.php?aksi=hapus&id" + id;
+                window.location.href = "proses.php?aksi=hapus&id="+id;
             }
         }
     </script>
