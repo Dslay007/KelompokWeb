@@ -1,11 +1,9 @@
 <?php
 
     function set_flashdata($key="", $value=""){
-        if (empty($key) && !empty($value)) {
-            {!$_SESSION['_flashdata'][$key]= $value;
+        if (!empty($key) && !empty($value)) {
+            $_SESSION['_flashdata'][$key]= $value;
                 return true;
-            
-            }
         }
 
         return false;
