@@ -3,9 +3,9 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-include "config/koneksi.php"; // File koneksi ke database
-include "fungsi/pesan_kilat.php"; // File fungsi untuk menampilkan pesan
-include "fungsi/anti_injection.php"; // File fungsi untuk mencegah serangan SQL Injection
+include "config/koneksi.php"; 
+include "fungsi/pesan_kilat.php"; 
+include "fungsi/anti_injection.php"; 
 
 $username = antiinjection($koneksi, $_POST['username']);
 $password = antiinjection($koneksi, $_POST['password']);
@@ -15,7 +15,7 @@ $result = mysqli_query($koneksi, $query);
 
 if ($result) {
     $row = mysqli_fetch_assoc($result);
-    mysqli_close($koneksi); // Menutup koneksi database
+    mysqli_close($koneksi); 
     $salt = $row['salt'];
     $hashed_password = $row['hashed_password'];
 
