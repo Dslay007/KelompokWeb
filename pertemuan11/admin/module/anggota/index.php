@@ -1,7 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href= "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
 <div class="container-fluid">
     <div class="row">
         <?php
-        include "admin/template/menu.php";
+        include('D:/laragon/www/dasarWeb/pertemuan11/admin/template/menu.php');
         ?>
 
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
@@ -37,6 +47,7 @@
                         </thead>
                         <tbody>
                             <?php
+                            $koneksi = mysqli_connect("localhost", "root", "", "prakwebdb");
                             $no = 1;
                             $query = "SELECT * FROM anggota a, jabatan j, user u WHERE a.jabatan_id = j.id AND a.user_id = u.id order by a.id desc";
                             $reqult = mysqli_query($koneksi, $query);
@@ -65,7 +76,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <form action="fungsi/tambah.php?anggota=tambah" method="post">
-                                <div class="modal-body">
+                                <div class="modal-body" style="max-height: 400px; overflow-y: auto;">
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Nama :</label>
                                         <input type="text" name="nama" class="form-control" id="recipient-name">
@@ -136,3 +147,6 @@
         </main>
     </div>
 </div>
+    
+</body>
+</html>
