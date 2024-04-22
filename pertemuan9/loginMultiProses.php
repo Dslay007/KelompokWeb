@@ -6,17 +6,17 @@
     $password = md5($_POST['password']);
 
 
-    $query = "SELECT * FROM user WHERE username = '$username' and password = '$password'";
+    $query = "SELECT * FROM userjs9 WHERE username = '$username' and password = '$password'";
     $result = mysqli_query($connect, $query);
     $row = mysqli_fetch_assoc($result);
 
-    if ($row['LEVEL'] == 1) {
+    if ($row['level'] == 1) {
         echo "Anda berhasil login, silakan menuju "; ?>
         <a href="homeAdmin.html">Halaman HOME</a>
     
     <?php
     } 
-    else if ($row['LEVEL'] == 2){
+    else if ($row['level'] == 2){
         echo "Anda berhasil login, silakan menuju "; ?>
         <a href="homeGuest.html">Halaman HOME</a>
     
