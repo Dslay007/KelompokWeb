@@ -1,7 +1,7 @@
-<?php
+<?php 
   $menu = 'bank_soal';
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,25 +20,13 @@
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
-
   <!-- Navbar -->
-
-  <?php
-
-    include_once('layouts/header.php');
-
-  ?>
-
+  <?php include_once('layouts/header.php'); ?>
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
+  <?php include_once('layouts/sidebar.php'); ?>
 
-  <?php
-
-    include_once('layouts/sidebar.php')
-
-  ?>
- 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -64,46 +52,30 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Bank Soal</h3>
+          <h3 class="card-title">Data Soal</h3>
 
           <div class="card-tools">
-
-            <a href="bank_soal_tambah.php" class="btn btn-sm btn-primary"> Tambah Soal </a>
-
+            <a href="bank_soal_form.php?act=tambah" class="btn btn-sm btn-primary">Tambah Data</a>
           </div>
         </div>
         <div class="card-body">
-          
-            <table class="table table-bordered table-sm">
+            <table class="table table-sm table-bordered">
                 <thead>
                     <tr>
                         <td>No</td>
                         <td>Kode Soal</td>
                         <td>Soal</td>
                         <td>Aksi</td>
-
                     </tr>
-
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>OO1</td>
-                        <td>Soallll</td>
+                        <td>001</td>
+                        <td>Soal 1</td>
                         <td>
-                            <a href="bank_soal_edit.php" class="btn btn-sm btn-warning" title="Edit Data"><i class="fa fa-edit"></i></a>
-                            <a href="bank_soal_hapus.php" class="btn btn-sm btn-danger" title="Hapus Data"><i class="fa fa-trash"></i></a>
-                        </td>
-
-                    </tr>
-
-                    <tr>
-                        <td>2</td>
-                        <td>OO1</td>
-                        <td>Soallll</td>
-                        <td>
-                            <a href="bank_soal_edit.php" class="btn btn-sm btn-warning" title="Edit Data"><i class="fa fa-edit"></i></a>
-                            <a href="bank_soal_hapus.php" class="btn btn-sm btn-danger" title="Hapus Data"><i class="fa fa-trash"></i></a>
+                            <a href="bank_soal_form.php?act=edit&id=1" class="btn btn-sm btn-warning" title="Edit Data"><i class="fa fa-edit"></i></a>
+                            <a href="bank_soal_action.php?act=hapus&id=1" class="btn btn-sm btn-danger" title="Hapus Data"><i class="fa fa-trash"></i></a>
                         </td>
                     </tr>
                 </tbody>
@@ -123,12 +95,7 @@
   </div>
   <!-- /.content-wrapper -->
 
-  <!-- footer -->
-  <?php
-
-    include_once('layouts/footer.php');
-
-  ?>
+  <?php include_once('layouts/footer.php'); ?>
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">

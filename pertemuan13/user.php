@@ -1,7 +1,7 @@
-<?php
+<?php 
   $menu = 'user';
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,25 +20,13 @@
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
-
   <!-- Navbar -->
-
-  <?php
-
-    include_once('layouts/header.php');
-
-  ?>
-
+  <?php include_once('layouts/header.php'); ?>
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
+  <?php include_once('layouts/sidebar.php'); ?>
 
-  <?php
-
-    include_once('layouts/sidebar.php')
-
-  ?>
- 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -46,12 +34,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Data Pengguna</h1>
+            <h1>Pengguna</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Blank Page</li>
+              <li class="breadcrumb-item active">Pengguna</li>
             </ol>
           </div>
         </div>
@@ -64,52 +52,35 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Title</h3>
+          <h3 class="card-title">Data Pengguna</h3>
 
           <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fas fa-minus"></i>
-            </button>
-            <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-              <i class="fas fa-times"></i>
-            </button>
+            <a href="user_form.php?act=tambah" class="btn btn-sm btn-primary">Tambah Data</a>
           </div>
         </div>
         <div class="card-body">
-        <table class="table table-bordered table-sm">
+            <table class="table table-sm table-bordered">
                 <thead>
                     <tr>
-                        <td>No</td>
+                        <td>Kode</td>
                         <td>Nama</td>
-                        <td>Role</td>
+                        <td>Jabatan</td>
                         <td>Aksi</td>
-
                     </tr>
-
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Yolanda</td>
-                        <td>Admin/td>
+                        <td>Yovi</td>
+                        <td>Admin 1</td>
                         <td>
-                            <a href="user_edit.php" class="btn btn-sm btn-warning" title="Edit Data"><i class="fa fa-edit"></i></a>
-                            <a href="user_hapus.php" class="btn btn-sm btn-danger" title="Hapus Data"><i class="fa fa-trash"></i></a>
-                        </td>
-
-                    </tr>
-
-                    <tr>
-                        <td>2</td>
-                        <td>Rifqi</td>
-                        <td>Admin</td>
-                        <td>
-                            <a href="user_edit.php" class="btn btn-sm btn-warning" title="Edit Data"><i class="fa fa-edit"></i></a>
-                            <a href="user_hapus.php" class="btn btn-sm btn-danger" title="Hapus Data"><i class="fa fa-trash"></i></a>
+                            <a href="user_form.php?act=edit&id=1" class="btn btn-sm btn-warning" title="Edit Data"><i class="fa fa-edit"></i></a>
+                            <a href="user_action.php?act=hapus&id=1" class="btn btn-sm btn-danger" title="Hapus Data"><i class="fa fa-trash"></i></a>
                         </td>
                     </tr>
                 </tbody>
             </table>
+
         </div>
         <!-- /.card-body -->
         <div class="card-footer">
@@ -124,12 +95,7 @@
   </div>
   <!-- /.content-wrapper -->
 
-  <!-- footer -->
-  <?php
-
-    include_once('layouts/footer.php');
-
-  ?>
+  <?php include_once('layouts/footer.php'); ?>
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
